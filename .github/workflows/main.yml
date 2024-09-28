@@ -1,0 +1,12 @@
+name: Test
+
+on: [push]
+
+jobs:
+  test-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comando multilinea
+        run: |
+          echo "Hola mundo" >> hola.txt
+          cat hola.txt
