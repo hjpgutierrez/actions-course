@@ -1,0 +1,9 @@
+name: "My first action"
+description: "Codigo facilito"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Hola mundo
+      run: echo "Hola desde el paquete de my-actions"
+      shell: bash

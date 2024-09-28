@@ -1,15 +1,13 @@
-# name: Test
+name: Test
 
-# on: [push]
+on: [push]
 
-# jobs:
-#   test-build:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Checkout
-#         uses: actions/checkout@v4.2.0
+jobs:
+  test-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.0
 
-#       - name: Comando multilinea
-#         run: |
-#           chmod +x script.sh
-#           ./script.sh
+      - name: my-action
+        run: ./.github/actions/my-action
