@@ -28,3 +28,11 @@ jobs:
 
       - name: LS
         run: ls -al
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4.0.4
+
+      - name: Node and NPM version
+        run: |
+          node --version
+          npm --version
