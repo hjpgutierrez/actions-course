@@ -27,3 +27,4 @@ jobs:
         run: |
           echo "Valor $MY_VAR"
           echo "Valor $MY_VAR_STEP"
+          echo "Valor ${{ vars.MY_GLOBAL_VAR }}"
