@@ -1,9 +1,15 @@
 name: "My first action"
 description: "Codigo facilito"
 
+inputs:
+  message:
+    description: "Mi primer parametro"
+    required: "true"
+    default: "Tú por defecto"
+
 runs:
   using: "composite"
   steps:
     - name: Hola mundo
-      run: echo "Hola desde el paquete de my-actions"
+      run: echo "Hola ${{ inputs.message }}"
       shell: bash
