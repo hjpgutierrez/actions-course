@@ -22,4 +22,8 @@ jobs:
 
     steps:
       - name: Test
-        run: echo "Valor $MY_VAR"
+        env:
+          MY_VAR_STEP: Mi variable dentro del step
+        run: |
+          echo "Valor $MY_VAR"
+          echo "Valor $MY_VAR_STEP"
