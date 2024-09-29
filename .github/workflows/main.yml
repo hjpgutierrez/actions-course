@@ -10,4 +10,4 @@ jobs:
         uses: actions/checkout@v4.2.0
 
       - name: my-action
-        run: sudo  ./.github/actions/my-action/action.yml
+        uses: ./.github/actions/my-action/
