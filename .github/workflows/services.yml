@@ -21,10 +21,14 @@ jobs:
     #       - 6379:6379
 
     steps:
-      - name: Test
+      - name: Variables
         env:
           MY_VAR_STEP: Mi variable dentro del step
         run: |
           echo "Valor $MY_VAR"
           echo "Valor $MY_VAR_STEP"
           echo "Valor ${{ vars.MY_GLOBAL_VAR }}"
+
+      - name: Secrets
+        run: |
+          echo "Valor ${{ secrets.MY_SQL_PASSWORD }}"
